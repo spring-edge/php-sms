@@ -2,7 +2,6 @@
     "name": "spring-edge/php-sms-lib",
     "description": "SMS Library to send sms",
     "require": {
-        "php": "^5.3.3 || ^7.0",
-        "another-vendor/package": "1.*"
+        "php": "^5.3.3 || ^7.0"
     }
 }
