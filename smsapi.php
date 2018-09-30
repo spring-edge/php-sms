@@ -5,7 +5,7 @@ class smsapi
  	private $apikey;
  	private $senderid;
 
- 	private $api = "http://springedge.com/developers.html"
+ 	private $api = "http://springedge.com/developers.html";
 
 	function __construct($apikey,$senderid)
 	{	
@@ -24,7 +24,7 @@ class smsapi
 		$message = urlencode($message);
 		$params = "web/send/?apikey=$this->apikey&sender=$this->senderid&to=$to&message=$message";
 		
-		$this->execute($params);
+		return $this->execute($params);
 	}
 	
 	
@@ -34,7 +34,7 @@ class smsapi
 	function execute($params)
 	{
 		$eurl = $this->api_url.$params;		
-        $output = file_get_contents($eurl);
+	        $output = file_get_contents($eurl);
 		return $output;
 	}    
 }
